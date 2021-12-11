@@ -12,15 +12,14 @@ import io.swagger.annotations.ApiModel;
 public class Ventas {
 
 	@Id
-	private long cedula_cliente;
-	
 	private String codigo_venta;
+	private long cedula_cliente;
 	private ArrayList<Detalle_Ventas> detalle_Venta;
 	private double iva_venta;
 	private double total_venta;
 	private double valor_venta;
 	private String ciudad;
-	private String  cedula_usuario;
+	private long  cedula_usuario;
 
 	public long getCedula_cliente() {
 		return cedula_cliente;
@@ -78,13 +77,15 @@ public class Ventas {
 		this.ciudad = ciudad;
 	}
 
-	public String getCedula_usuario() {
+	public long getCedula_usuario() {
 		return cedula_usuario;
 	}
 
-	public void setCedula_usuario(String cedula_usuario) {
+	public void setCedula_usuario(long cedula_usuario) {
 		this.cedula_usuario = cedula_usuario;
 	}
+
+ 
 	
 	
 
